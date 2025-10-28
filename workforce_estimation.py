@@ -256,8 +256,7 @@ with col1:
     **Calculation:**
     - Daily Target: ₹{loan_amt_current/no_of_days:,.0f}
     - Per Person Target: ₹{sanction_sales_target:,.0f}
-    - **Exact Staff Needed:** {no_sanction_sales:.2f}
-    - **Rounded Up:** {int(no_sanction_sales) + (1 if no_sanction_sales % 1 > 0 else 0)} persons
+    - **Staff Required:** {int(no_sanction_sales) + (1 if no_sanction_sales % 1 > 0 else 0)} persons
     """)
 
 with col2:
@@ -267,8 +266,7 @@ with col2:
         **Calculation:**
         - Loans to Check: {loans_to_be_checked:.2f}
         - Credit Efficiency/Day: {credit_efficiency:.0f}
-        - **Exact Staff Needed:** {no_credit:.2f}
-        - **Rounded Up:** {int(no_credit) + (1 if no_credit % 1 > 0 else 0)} persons
+        - **Staff Required:** {int(no_credit) + (1 if no_credit % 1 > 0 else 0)} persons
         """)
     else:
         st.warning(f"""
@@ -283,8 +281,7 @@ with col3:
     **Calculation:**
     - Total Collection Target: ₹{total_collection_required:,.0f}
     - Per Person Target: ₹{collection_target:,.0f}
-    - **Exact Staff Needed:** {no_collection:.2f}
-    - **Rounded Up:** {int(no_collection) + (1 if no_collection % 1 > 0 else 0)} persons
+    - **Staff Required:** {int(no_collection) + (1 if no_collection % 1 > 0 else 0)} persons
     """)
 
 # Collection breakdown
