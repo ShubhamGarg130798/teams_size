@@ -24,6 +24,19 @@ st.markdown("""
         text-align: center;
         margin-bottom: 2rem;
     }
+    /* Improve sidebar scrolling */
+    section[data-testid="stSidebar"] {
+        overflow-y: auto !important;
+        scroll-behavior: smooth !important;
+    }
+    /* Add padding to sidebar content */
+    section[data-testid="stSidebar"] > div {
+        padding-bottom: 100px !important;
+    }
+    /* Ensure input fields are fully visible when focused */
+    .stNumberInput {
+        margin-bottom: 1rem;
+    }
     </style>
 """, unsafe_allow_html=True)
 
