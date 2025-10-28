@@ -41,8 +41,8 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Title and description
-st.markdown('<p class="main-header">📊 Team Requirement Analyzer</p>', unsafe_allow_html=True)
-st.markdown('<p class="sub-header">Calculate staffing requirements based on loan disbursement targets</p>', unsafe_allow_html=True)
+st.markdown('<p class="main-header">📊 Work-Force Analyzer</p>', unsafe_allow_html=True)
+st.markdown('<p class="sub-header">Resource requirements based on loan disbursement targets</p>', unsafe_allow_html=True)
 
 # Sidebar for inputs
 st.sidebar.header("⚙️ Input Parameters")
