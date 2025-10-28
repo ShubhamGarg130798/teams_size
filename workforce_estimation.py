@@ -324,6 +324,9 @@ team_rounded = {
     'Collection': int(no_collection) + (1 if no_collection % 1 > 0 else 0)
 }
 
+# Fixed the "Loans to be Checked" line to avoid the error
+loans_checked_display = f"{loans_to_be_checked:.2f}" if work_type == "NON-PHP" else "N/A (PHP)"
+
 summary_data = {
     'Parameter': [
         'Work Type',
@@ -376,7 +379,7 @@ summary_data = {
         '',
         f"{no_sanction_sales:.2f}",
         f"{team_rounded['Sales']}",
-        f"{loans_to_be_checked:.2f}" if work_type == "NON-PHP" else "N/A (PHP)",
+        loans_checked_display,
         f"{no_credit:.2f}" if work_type == "NON-PHP" else "0 (PHP)",
         f"{team_rounded['Credit']}",
         f"{no_collection:.2f}",
@@ -427,7 +430,7 @@ CALCULATED RESULTS:
 - Amount in Bank: ₹{amt_in_bank:,.0f}
 - Repayment Amount: ₹{repayment_amt:,.0f}
 - Number of Loans: {int(no_of_loans)}
-- Loans to be Checked: {loans_to_be_checked:.2f if work_type == 'NON-PHP' else 'N/A (PHP)'}
+- Loans to be Checked: {loans_checked_display}
 - Sales Staff: {team_rounded['Sales']}
 - Credit Staff: {team_rounded['Credit']} {'(PHP - No Credit Team)' if work_type == 'PHP' else ''}
 - Collection Staff: {team_rounded['Collection']}
