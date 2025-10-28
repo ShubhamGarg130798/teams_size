@@ -217,10 +217,10 @@ col1, col2, col3, col4 = st.columns(4)
 
 with col1:
     st.metric(
-        label="💵 Amount in Bank",
-        value=f"₹{amt_in_bank/100000:.2f}L",
+        label="💵 Loan Amount to be Disbursed",
+        value=f"₹{loan_amt_current/100000:.2f}L",
         delta=f"-₹{pf_amount/100000:.2f}L (PF)",
-        help=f"Net amount after deducting {pf_percentage}% processing fee"
+        help=f"Total loan amount for disbursement (PF: {pf_percentage}%)"
     )
 
 with col2:
