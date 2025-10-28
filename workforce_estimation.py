@@ -3,7 +3,7 @@ import pandas as pd
 
 # Page configuration
 st.set_page_config(
-    page_title="Team Requirement Analyzer",
+    page_title="Work-Force Analyzer",
     page_icon="📊",
     layout="wide"
 )
